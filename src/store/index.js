@@ -14,9 +14,7 @@ export default new Vuex.Store({
         count:0
     },
     mutations:{
-        addCount(state,count){
-            state.count++
-        }
+        
         },
         
     
@@ -25,9 +23,7 @@ export default new Vuex.Store({
     },
     //异步操作的集合
     actions:{
-     numm(context,args){
-         context.commit('numm',args)
-     }
+    
     },
     methods: {
         
