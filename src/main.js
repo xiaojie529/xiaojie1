@@ -6,12 +6,12 @@ import router from './router'
 import axios from 'axios'
 //使用vuex仓库
 import store from './store'
+import "../static/js/rem.js"
+import Vant from 'vant';
+import 'vant/lib/index.css';
 
+Vue.use(Vant);
 
-import Ele from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
-import ElementUI from 'element-ui'
-Vue.use(ElementUI)
 
 
 //请求拦截器

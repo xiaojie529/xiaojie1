@@ -1,25 +1,25 @@
 <template>
-    <div class="home">
-        
-    </div>
+  <div class="home">
+    <banner></banner>
+  </div>
 </template>
 
 <script>
+import banner from "../components/Banner"
 export default {
-    data() {
-        return {
-
-        };
-    },
-    created() {
-
-    },
-    mounted() {
-
-    },
-    methods: {
-
-    }
+  data() {
+    return {
+       
+    };
+  },
+  components: {
+      banner
+  },
+  created() {
+     
+  },
+  mounted() {},
+  methods: {}
 };
 </script>
 
