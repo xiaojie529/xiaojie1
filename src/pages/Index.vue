@@ -1,8 +1,9 @@
 <template>
-  <div class="home">
+  <div>
     <banner></banner>
     <bg></bg>
     <jxzhu></jxzhu>
+    <tj></tj>
   </div>
 </template>
 
@@ -10,23 +11,19 @@
 import banner from "../components/Banner"
 import bg from "../components/Bg"
 import jxzhu from "../components/Jxzhu"
+import tj from "../components/Tjzhu"
 export default {
   data() {
-    return {
-       
-    };
+    return {};
   },
   components: {
-      banner,bg,jxzhu
+      banner,bg,jxzhu,tj
   },
-  created() {
-     
-  },
+  created() {},
   mounted() {},
   methods: {}
 };
 </script>
 
 <style scoped>
-
 </style>
