@@ -1,45 +1,54 @@
 <template>
- <div>
-   <div class="bg">
-      <p>全民砍价></p>
-    </div>
-    <ul>
+  <div>
+    
 
-      <kj v-for="item in bg" :d="item" :key="item.id"></kj>
-    </ul>
-
- </div>
+    <li>
+      <div class="kj">
+        <img :src="d.pic" alt />
+        <div class="nr">
+          <p class="nrp1">{{ d.name }}</p>
+          <p class="nrp2">{{ d.characteristic }}</p>
+          <ol>
+            <li>
+              <p class="dj">￥{{ d.minPrice }}</p>
+              <p class="dj1">低价</p>
+            </li>
+            <li>
+              <p class="jq">￥{{ d.originalPrice }}</p>
+              <p class="jq">原价</p>
+            </li>
+            <li>
+              <p class="jq">{{ d.stores }}件</p>
+              <p class="jq">限量</p>
+            </li>
+          </ol>
+        </div>
+      </div>
    
-     
-  
+   </li>
+  </div>
 </template>
 
 <script>
-import kj from './Kj'
+
 export default {
+  props: ["d"],
   data() {
     return {
-       bg:[]
+     
     };
   },
-  components: {
-    kj
-  },
-  
   created() {
-     this.$http.get("https://api.it120.cc/small4/shop/goods/kanjia/list").then((res) => {
-        console.log(res);
-        this.bg = res.data.data.goodsMap;
-      });
+   
   },
   mounted() {
-     
+    
   },
   methods: {}
 };
 </script>
 
-<style lang="less">
+<style  lang="less">
 .bg {
   width: 4rem;
   height: 0.5rem;
@@ -90,7 +99,7 @@ ul {
           li {
             display: flex;
             flex-wrap: wrap;
-           
+            margin: 0.05rem;
             .dj {
               font-size: 0.16rem;
               color: red;

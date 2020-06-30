@@ -14,7 +14,7 @@ export default {
   components: {Loading},
   created() {},
   mounted() {
-    this.$http.get("https://www.vue-js.com/api/v1/topics").then(res => {});
+    // this.$http.get("https://www.vue-js.com/api/v1/topics").then(res => {});
   },
   methods: {}
 };
@@ -44,6 +44,10 @@ body,html{
 }
 .footer{
   background: green;
+}
+*{
+  margin: 0;
+  padding: 0;
 }
 
 </style>
